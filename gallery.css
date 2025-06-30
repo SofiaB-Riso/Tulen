@@ -236,6 +236,23 @@ section{
     "d1 d1 d5 d5 d4"
     "d6 d6 d5 d5 d7"
     "d8 d9 d9 d10 d11"
+    overflow-y: scroll;
+  /* Estilos para WebKit (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 12px;
+    height: 60px;
+    z-index: 10;
+    width: 100;
+  }
+  
     ;
     height: 158vh;
     gap: 10px;
