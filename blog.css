@@ -1,0 +1,370 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-areas: "hed sec";
+}
+
+.azul{
+    color: #2916e0;
+}
+.cinza{
+    color: #B4B4B4;
+    fill: #B4B4B4;
+}
+
+#header{
+    height: 100%;
+    width:90px;
+    grid-area: hed;
+}
+.menu{
+    width: 100%;
+    background-color: #0f0f0f;
+    height: 90px;
+    background-image: url(menu.png);
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-position: center ;
+    margin-left: 0;
+    transition: 0.3s;
+}
+
+#menu{
+    z-index: 90;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+aside{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    height: 100%;
+    width:20%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    margin-left: -20%;
+    transition: ease-in-out 0.3s;
+}
+
+.aMEnu{
+    height: 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90px auto;
+    grid-template-areas: "s t";
+}
+
+.seta{
+    background-color: #0f0f0f;
+    grid-area: s;
+    height: 100%;
+    background-position: center;
+    background-image: url(setaA.png);
+    background-repeat: no-repeat;
+    background-size: 29px;
+}
+
+.tolen{
+    background-color: #2916e0;
+    height: 100%;
+    grid-area: t;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+aside ul{
+    margin-top: 25%;
+}
+aside ul>li{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 2.15;
+    transition:  0.8s;
+    cursor: pointer;
+}
+
+aside ul>li>a{
+    text-decoration: none;
+}
+.media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    svg { width: 20px; height: 20px; margin: -15px 6% 0px;}
+}
+
+
+.lefy{
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    transition: ease-in-out 0.35s;
+}
+
+.lefy p{
+    padding:0px 10% ;
+    font-size: 15px;
+    color: #636363;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 5%;
+}
+
+.lefy p>i{
+    color: #e21010;
+}
+
+.lefy p>a{
+    text-decoration: none;
+    color: #B4B4B4;
+}
+
+.ti-heart:before {
+	content: "\e634";
+}
+aside ul>li:hover a{
+    color: #2916e0;
+}
+
+#menu:checked ~#header>.lefy{
+    margin-left:  -90px;
+}
+#menu:checked ~#header>.lefy>.menu  aside{
+    margin-left: 0;
+}
+
+.midia{
+    height: 86%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 35% repeat(4, 10%) 90px;
+    grid-template-areas: 
+    "E1"
+    "f"
+    "t"
+    "i"
+    "it"
+    "E2";
+    
+}
+.midia a>svg{
+    fill: #252525;
+    width: 18px;
+    height: 18px;
+}
+
+.esp1{
+    grid-area: E1;
+}
+.esp2{
+    grid-area: E2;
+}
+.face{
+    grid-area: f;
+}
+.twi{
+    grid-area: t;
+}
+.in{
+    grid-area: i;
+}
+.insta{
+    grid-area: it;
+}
+
+
+section{
+    height: 100%;
+    width: 100%;
+    grid-area: sec;
+    background-color: white;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: repeat(9  1fr);
+    grid-template-areas: 
+    "d01 d02 d03 d04 d05"
+    "d01 d02 d03 d04 d05"
+    "d01 d07 d03 d04 d05"
+    "d01 d07 d03 d09 d05"
+    "d06 d07 d08 d09 d10"
+    "d06 d12 d08 d14 d10"
+    "d11 d12 d08 d14 d15"
+    "d11 d12 d13 d14 d15"
+    "d11 d12 d13 d14 d15"
+    ;
+    padding-bottom: 10px;
+}
+
+.item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.d01{
+    grid-area: d01;
+    background-color: yellow;
+    background-image: url(b1.webp);
+}
+.d02{
+    grid-area: d02;
+    background-color: pink;
+    background-image: url(b2.webp);
+}
+.d03{
+    grid-area: d03;
+    background-color: lime;
+    background-image: url(b3.webp);
+}
+.d04{
+    grid-area: d04;
+    background-color: orangered;
+    background-image: url(b4.webp);
+}
+.d05{
+    grid-area: d05;
+    background-color: orange;
+    background-image: url(b5.webp);
+}
+.d06{
+    grid-area: d06;
+    background-color: aquamarine;
+    background-image: url(b6.webp);
+}
+.d07{
+    grid-area: d07;
+    background-color: teal;
+    background-image: url(b7.webp);
+}
+.d08{
+    grid-area: d08;
+    background-color: green;
+    background-image: url(b8.webp);
+}
+.d09{
+    grid-area: d09;
+    background-color: grey;
+    background-image: url(b9.webp);
+}
+.d10{
+    grid-area: d10;
+    background-color: darkgreen;
+    background-image: url(b10.webp);
+}
+.d11{
+    grid-area: d11;
+    background-color: cyan;
+    background-image: url(b11.webp);
+}
+.d12{
+    grid-area: d12;
+    background-color: darkcyan;
+    background-image: url(b12.webp);
+}
+.d13{
+    grid-area: d13;
+    background-color: palevioletred;
+    background-image: url(b13.webp);
+}
+.d14{
+    grid-area: d14;
+    background-color: indigo;
+    background-image: url(b14.webp);
+}
+.d15{
+    grid-area: d15;
+    background-color: lightblue;
+    background-image: url(b15.webp);
+}
+
+.et{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.et div{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.et div>p{
+    height: 17px;
+    width: 58px;
+    padding: 4px 20px;
+    font-size: 12px;
+    color: #2916e0;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 2px;
+    background-color: white;
+}
+
+#con h6{
+    font-size: 13px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+#con h3>a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+#con h3{
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#con{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+@media (max-width: 1600px){
+    #con h3{
+    font-size: 16px;
+    line-height: 1.6;
+}
+#con h6{
+    font-size: 12px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+}
