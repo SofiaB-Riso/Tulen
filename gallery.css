@@ -270,6 +270,10 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.fi:hover{
+    cursor: pointer;
+}
 .d1{
     grid-area: d1;
     background-color: aqua;
@@ -389,3 +393,6 @@ section{
 }
 
 
+.lista li:hover{
+    cursor: pointer;
+}
