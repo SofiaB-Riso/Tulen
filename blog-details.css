@@ -24,6 +24,7 @@ body{
     height: 100%;
     width:90px;
     grid-area: hed;
+    
 }
 .menu{
     width: 100%;
@@ -48,16 +49,48 @@ body{
     left: 0;
 }
 
+
+#header{
+    z-index: 90;
+    height: 100%;
+    width:90px;
+    grid-area: hed;
+    position: fixed;
+}
+.menu{
+    width: 100%;
+    background-color: #0f0f0f;
+    height: 90px;
+    background-image: url(menu.png);
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-position: center ;
+    margin-left: 0;
+    transition: 0.3s;
+    z-index: 90;
+}
+
+#menu{
+    z-index: 99;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
 aside{
     background-color: rgb(255, 255, 255);
-    position: absolute;
+    position: fixed;
     height: 100%;
-    width:20%;
-    z-index: 20;
+    width: 273px;
+    z-index: 90;
     top: 0;
     left: 0;
     margin-left: -20%;
-    transition: ease-in-out 0.3s;
+    transition: 0.3s;
 }
 
 .aMEnu{
@@ -93,7 +126,7 @@ aside{
 }
 
 aside ul{
-    margin-top: 25%;
+    margin: 80% 0 0 ;
 }
 aside ul>li{
     text-align: center;
@@ -112,25 +145,24 @@ aside ul>li>a{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    svg { width: 20px; height: 20px; margin: -15px 6% 0px;}
+    svg { width: 20px; height: 20px; margin: 60% 6% 5%;}
 }
 
 
 .lefy{
+    z-index: 99;
     height: 100%;
     width: 100%;
     margin-left: 0;
     transition: ease-in-out 0.35s;
 }
-
 .lefy p{
     padding:0px 10% ;
     font-size: 15px;
     color: #636363;
     line-height: 1.8;
     text-align: center;
-    font-weight: 400;
-    margin-top: 5%;
+    font-weight: 500;
 }
 
 .lefy p>i{
@@ -161,7 +193,7 @@ aside ul>li:hover a{
     width: 100%;
     display: grid;
     place-items: center;
-    grid-template-rows: 110px repeat(4, 80px) 90px;
+    grid-template-rows: 35% repeat(4, 10%) 90px;
     grid-template-areas: 
     "E1"
     "f"
@@ -205,7 +237,7 @@ section{
 }
 #cab{
     height: 95%;
-    width:  86%;
+    width:  60%;
 }
 .may{
     font-size: 13px;
@@ -252,6 +284,7 @@ section p{
 }
 
 .grid1{
+    margin-top: 50px;
     height: 575px;
     margin-bottom: 10px;
     gap: 10px;
@@ -299,7 +332,7 @@ section p{
 .tag p{
     height: 18px;
     width: fit-content;
-    padding: 4px 20px;
+    padding: 4px 16px;
     font-size: 12px;
     color: #2916e0;
     letter-spacing: 2px;
@@ -317,7 +350,7 @@ section p{
 }
 
 .tag{
-    width: 55%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
 }
@@ -327,20 +360,24 @@ section p{
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 40%;
 }
 
-.midia{
+.modia{
+    width: 40%;
     display: flex;
     justify-content: flex-end;
-    gap: 1%;
+    align-items: center;
+    gap: 2%;
 }
 
-.midia span{
+.modia span{
     margin-right: 20px;
     font-size: 16px;
     color: #252525;
 }
-.midia div{
+.modia div{
     height: 36px;
     width: 36px;
     border-radius: 50%;
@@ -349,11 +386,86 @@ section p{
     transition: ease-in-out 0.3s;
 }
 
-.midia div:hover{
+.modia div:hover{
      height: 36px;
     width: 36px;
     border-radius: 50%;
     background-color: #2916e0;
     svg{fill:#ebebeb}
     cursor: pointer;
+}
+
+.grid2{
+    height: 236px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "i1 i2";
+}
+
+.d01{
+    grid-area: i1;
+    background-image: url(b15.webp);
+    background-image: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d02{
+    grid-area: i2;
+    background-image: url(8.jpg.webp);
+    background-image: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid2 div>h4{
+    color: #fff;
+    max-width: 350px;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.rec h3{
+    margin: 40px 0 30px;
+    color: #252525;
+    font-weight: 600;
+    font-size: 30px;
+    grid-area: h;
+}
+
+.rec{
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 44px 206px;
+    grid-template-areas: 
+    "h h h"
+    "r1 r2 r3";
+}
+
+.r1{
+    grid-area: r1;
+    background-image: url(star_1.png);
+    background-image: cover;
+    background-position: center;
+}
+.r2{
+    grid-area: r2;
+    background-image: url(b4.webp);
+    background-image: cover;
+    background-position: center;
+}
+.r3{
+    grid-area: r3;
+    background-image: url(b3.webp);
+    background-image: cover;
+    background-position: center;
 }

@@ -53,7 +53,7 @@ aside{
     background-color: rgb(255, 255, 255);
     position: absolute;
     height: 100%;
-    width:20%;
+    width: 273px;
     z-index: 20;
     top: 0;
     left: 0;
@@ -94,7 +94,7 @@ aside{
 }
 
 aside ul{
-    margin-top: 25%;
+    margin: 80% 0 0 ;
 }
 aside ul>li{
     text-align: center;
@@ -113,7 +113,7 @@ aside ul>li>a{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    svg { width: 20px; height: 20px; margin: -15px 6% 0px;}
+    svg { width: 20px; height: 20px; margin: 60% 6% 5%;}
 }
 
 
@@ -130,8 +130,7 @@ aside ul>li>a{
     color: #636363;
     line-height: 1.8;
     text-align: center;
-    font-weight: 400;
-    margin-top: 5%;
+    font-weight: 500;
 }
 
 .lefy p>i{
@@ -199,7 +198,7 @@ aside ul>li:hover a{
 
 
 section{
-    height: 100%;
+    height: 110%;
     width: 100%;
     grid-area: sec;
     background-color: white;
@@ -219,6 +218,22 @@ section{
     "d11 d12 d13 d14 d15"
     ;
     padding-bottom: 10px;
+    overflow-y: scroll;
+  /* Estilos para WebKit (Chrome, Safari, Edge) */
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 12px;
+    height: 60px;
+    z-index: 10;
+    width: 100;
+  }
 }
 
 .item{
@@ -356,6 +371,10 @@ section{
     justify-content: end;
 }
 
+::-webkit-scrollbar {
+    width: 0.1px;/* Largura da barra de rolagem */
+  }
+
 @media (max-width: 1600px){
     #con h3{
     font-size: 16px;
@@ -367,4 +386,6 @@ section{
     margin-bottom: 10px;
     font-weight: 400;
 }
+
 }
+
